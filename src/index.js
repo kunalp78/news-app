@@ -10,16 +10,32 @@ const root = document.querySelector('#root');
 class App extends Component {
 
   state = {
-    news:JSON
+    news:JSON,
+    filtered:[]
   }
 
+  getKeyword = (event)=>{
+   // console.log(event.target.value)
+   let keyword = event.target.value
+   let filtered = this.state.news.filter((item)=>{
+     return item.title.indexOf(keyword) > -1
+   });
+   this.setState({
+     filtered
+   })
+  }
   render(){
     // console.log(this.state.news)
   return (
     <div>
-      <Header/>
-      <NewsList news={this.state.news}/>
+      <Header keyword={this.getKeyword} />
+      <NewsList news={this.state.filtered.length === 0 ? this.state.news : this.state.filtered}>
+        <h3>
+        The Latest Update:
+        </h3>
+      </NewsList>
     </div>
+      
   )
   }
 }

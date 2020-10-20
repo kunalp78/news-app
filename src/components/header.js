@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React from 'react';
 import '../css/styles.css'
 
 // const getYear = ()=>{
@@ -7,28 +7,15 @@ import '../css/styles.css'
 // }
 
 
-class Header extends Component{
+const Header = (props) =>{
 
-    state = {
-        keywords:''
-    }
-
-    inputChangeHandlerEvent = (event)=>{
-        //console.log(event.target.value)
-        this.setState({
-            keywords:event.target.value
-        })
-    }
-
-    render(){
-        
         return <header>
             <div className="logo">The E-Guardians</div>
-            <input type="text" onChange={this.inputChangeHandlerEvent}/>
+            <input type="text" onChange={props.keyword}/>
             {/* <div>{this.state.title}</div>
             <div> {this.state.keywords} </div> */}
         </header>
-    }
+
 }
 
 export default Header;
