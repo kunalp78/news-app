@@ -21,8 +21,9 @@ class Header extends Component{
     }
 
     render(){
+        
         return <header>
-            <div className="logo">Logo</div>
+            <div className="logo">The E-Guardians</div>
             <input type="text" onChange={this.inputChangeHandlerEvent}/>
             {/* <div>{this.state.title}</div>
             <div> {this.state.keywords} </div> */}

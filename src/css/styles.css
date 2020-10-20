@@ -2,12 +2,13 @@ body{
     margin: 0;
 }
 header{
-    background:#03a9f4;
+    /* background:#03a9f4; */
+    background: #F1C27D;
     text-align: center;
 }
 .logo{
     color:#fff;
-    font-family:'Anton';
+    font-family: 'Sansita Swashed', cursive;
     font-size:40px;
 }
 header input{
